@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Factoría Alianza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factoría Alianza – Taller Automotriz</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header { background:#333; color:#fff; padding:20px; text-align:center; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; }
+    section { padding:20px; }
+    .servicios { display:flex; flex-wrap:wrap; gap:10px; }
+    .servicio { flex:1 1 calc(33% - 20px); border:1px solid #ccc; padding:10px; }
+    .galeria { display:flex; flex-wrap:wrap; gap:10px; }
+    .galeria img { width: calc(50% - 10px); }
+    footer { background:#f4f4f4; text-align:center; padding:10px; font-size:14px; }
+    @media(max-width:600px){
+      .servicio { flex:1 1 100%; }
+      .galeria img { width:100%; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Bienvenido a Factoría Alianza</h1>
-    <p>Especialistas en mantenimiento y reparación de motores en Chincha.</p>
+
+  <header>
+    <h1>Factoría Alianza</h1>
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <h3>Diagnóstico con Scanner</h3>
+        <p>Revisión completa de sensores y sistemas electrónicos.</p>
+      </div>
+      <div class="servicio">
+        <h3>Mantenimiento de Motores</h3>
+        <p>Cambio de aceite, filtros y ajustes de precisión.</p>
+      </div>
+      <div class="servicio">
+        <h3>Reparación de Transmisiones</h3>
+        <p>Servicios en cajas manuales y automáticas.</p>
+      </div>
+      <!-- Agrega más servicios aquí -->
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="https://via.placeholder.com/400x300?text=Taller+1" alt="Taller foto 1">
+      <img src="https://via.placeholder.com/400x300?text=Taller+2" alt="Taller foto 2">
+      <img src="https://via.placeholder.com/400x300?text=Motor" alt="Motor">
+      <img src="https://via.placeholder.com/400x300?text=Equipo" alt="Equipo">
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Chincha Alta, Perú</p>
+    <p>📞 <a href="tel:+51123456789">+51 123 456 789</a></p>
+    <p>📧 <a href="mailto:contacto@factoriaalianza.com">contacto@factoriaalianza.com</a></p>
+    <p><a href="https://wa.me/51123456789" target="_blank">Envíanos un WhatsApp</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Factoría Alianza. Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
