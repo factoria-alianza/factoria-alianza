@@ -6,7 +6,7 @@ body {
 /* Hero */
 .hero {
   height: 60vh;
-  background: url('../images/portada.png') center/cover no-repeat;
+  background: url('../imagenes/portada.png') center/cover no-repeat;
 }
 
 /* Secciones */
