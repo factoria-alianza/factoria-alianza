@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Factoria Alianza - Taller Automotriz</title>
   <!-- TailwindCSS CDN -->
-  <script src="https://cdn.tailwindcss.com "></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Babel para procesar JSX -->
-  <script src="https://unpkg.com/ @babel/standalone/babel.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <!-- React y ReactDOM -->
-  <script crossorigin src="https://unpkg.com/react @18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom @18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 <body class="bg-white text-gray-900">
   <div id="root"></div>
@@ -24,28 +24,28 @@
       const [activeTab, setActiveTab] = useState('all');
 
       const services = [
-        { id: 1, title: "Mechanical Repairs", description: "From routine maintenance to complex engine repairs, our certified technicians have the expertise to keep your vehicle running smoothly.", icon: "🔧" },
-        { id: 2, title: "Electrical Systems", description: "Modern vehicles rely heavily on complex electrical systems. Our specialists can diagnose and repair any electrical issues in your car.", icon: "⚡" },
-        { id: 3, title: "Brake Services", description: "Safety is our priority. We offer comprehensive brake inspections, repairs, and replacements using premium parts.", icon: "🛑" },
-        { id: 4, title: "Air Conditioning", description: "Ensure comfort during hot summer months with our AC system diagnostics, recharging, and repair services.", icon: "❄️" },
-        { id: 5, title: "Engine Diagnostics", description: "Our state-of-the-art diagnostic equipment quickly identifies issues and provides accurate solutions for your vehicle's performance problems.", icon: "🛠️" },
-        { id: 6, title: "Suspension & Steering", description: "Maintain optimal handling and ride comfort with our suspension and steering system inspections and repairs.", icon: "🛞" },
+        { id: 1, title: "Reparaciones Mecánicas", description: "Desde mantenimiento rutinario hasta reparaciones complejas, nuestros técnicos certificados tienen la experiencia para mantener su vehículo en óptimas condiciones.", icon: "🔧" },
+        { id: 2, title: "Sistemas Eléctricos", description: "Los vehículos modernos dependen de complejos sistemas eléctricos. Nuestros especialistas pueden diagnosticar y reparar cualquier falla eléctrica.", icon: "⚡" },
+        { id: 3, title: "Servicios de Frenos", description: "La seguridad es nuestra prioridad. Ofrecemos inspecciones, reparaciones y reemplazos de frenos con piezas de primera calidad.", icon: "🛑" },
+        { id: 4, title: "Aire Acondicionado", description: "Mantenga la comodidad en los meses calurosos con diagnóstico, recarga y reparación de su sistema de aire acondicionado.", icon: "❄️" },
+        { id: 5, title: "Diagnóstico de Motor", description: "Nuestro equipo de diagnóstico de última generación identifica rápidamente problemas de rendimiento y ofrece soluciones precisas.", icon: "🛠️" },
+        { id: 6, title: "Suspensión y Dirección", description: "Mantenga el manejo y la comodidad de conducción con nuestras inspecciones y reparaciones de suspensión y dirección.", icon: "🛞" },
       ];
 
       const parts = [
-        { id: 1, name: "Brake Pads", price: "$39.99", image: "https://picsum.photos/seed/pad/300/300 ", category: "brakes" },
-        { id: 2, name: "Oil Filter", price: "$12.50", image: "https://picsum.photos/seed/filter/300/300 ", category: "engine" },
-        { id: 3, name: "Air Filter", price: "$24.95", image: "https://picsum.photos/seed/airfilter/300/300 ", category: "engine" },
-        { id: 4, name: "Spark Plugs", price: "$8.75", image: "https://picsum.photos/seed/spark/300/300 ", category: "engine" },
-        { id: 5, name: "Battery", price: "$129.99", image: "https://picsum.photos/seed/battery/300/300 ", category: "electrical" },
-        { id: 6, name: "Tires", price: "$99.99", image: "https://picsum.photos/seed/tires/300/300 ", category: "suspension" },
+        { id: 1, name: "Pastillas de Freno", price: "$39.99", image: "https://picsum.photos/seed/pad/300/300", category: "brakes" },
+        { id: 2, name: "Filtro de Aceite", price: "$12.50", image: "https://picsum.photos/seed/filter/300/300", category: "engine" },
+        { id: 3, name: "Filtro de Aire", price: "$24.95", image: "https://picsum.photos/seed/airfilter/300/300", category: "engine" },
+        { id: 4, name: "Bujías", price: "$8.75", image: "https://picsum.photos/seed/spark/300/300", category: "engine" },
+        { id: 5, name: "Batería", price: "$129.99", image: "https://picsum.photos/seed/battery/300/300", category: "electrical" },
+        { id: 6, name: "Neumáticos", price: "$99.99", image: "https://picsum.photos/seed/tires/300/300", category: "suspension" },
       ];
 
       const testimonials = [
-        { id: 1, name: "Carlos Mendoza", rating: 5, text: "Excellent service! My car was making strange noises and the team at Factoria Alianza diagnosed and fixed the problem quickly. Highly recommend!" },
-        { id: 2, name: "Ana Rodriguez", rating: 5, text: "I've been coming here for years. The staff is knowledgeable, friendly, and always does quality work. They even offer pickup and drop-off service!" },
-        { id: 3, name: "Luis Torres", rating: 4, text: "Great prices on parts and the technicians know their stuff. Only complaint is sometimes they get busy and wait times can be long." },
-        { id: 4, name: "Sofia Alvarez", rating: 5, text: "Needed an emergency repair on my car and they fit me in the same day. The problem was fixed quickly and the price was fair." },
+        { id: 1, name: "Carlos Mendoza", rating: 5, text: "¡Servicio excelente! Mi coche hacía ruidos extraños y el equipo de Factoria Alianza diagnosticó y solucionó el problema rápidamente. ¡Muy recomendable!" },
+        { id: 2, name: "Ana Rodríguez", rating: 5, text: "Voy aquí desde hace años. El personal es muy amable, profesional y siempre hace un trabajo de calidad. ¡Incluso ofrecen servicio de recojo y entrega!" },
+        { id: 3, name: "Luis Torres", rating: 4, text: "Precios competitivos en repuestos y los técnicos conocen muy bien su trabajo. Mi única queja es que a veces se llenan y la espera puede ser larga." },
+        { id: 4, name: "Sofía Álvarez", rating: 5, text: "Necesitaba una reparación de emergencia y me atendieron el mismo día. El problema se resolvió rápido y el precio fue justo." },
       ];
 
       const renderStars = (rating) => (
@@ -72,11 +72,11 @@
                 <span className="ml-2 text-xl font-bold">Factoria Alianza</span>
               </div>
               <nav className="hidden md:flex space-x-8">
-                <a href="#home" className="text-white hover:text-red-500 transition-colors">Home</a>
-                <a href="#services" className="text-white hover:text-red-500 transition-colors">Services</a>
-                <a href="#parts" className="text-white hover:text-red-500 transition-colors">Parts</a>
-                <a href="#about" className="text-white hover:text-red-500 transition-colors">About</a>
-                <a href="#contact" className="text-white hover:text-red-500 transition-colors">Contact</a>
+                <a href="#home" className="text-white hover:text-red-500 transition-colors">Inicio</a>
+                <a href="#services" className="text-white hover:text-red-500 transition-colors">Servicios</a>
+                <a href="#parts" className="text-white hover:text-red-500 transition-colors">Repuestos</a>
+                <a href="#about" className="text-white hover:text-red-500 transition-colors">Acerca de</a>
+                <a href="#contact" className="text-white hover:text-red-500 transition-colors">Contacto</a>
               </nav>
               <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center">
@@ -89,7 +89,7 @@
                   <svg className="w-5 h-5 text-red-500 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
                   </svg>
-                  <span className="text-sm">123 Mechanic St, City</span>
+                  <span className="text-sm">123 Calle Mecánica, Chincha Alta</span>
                 </div>
               </div>
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white focus:outline-none">
@@ -107,11 +107,11 @@
             {mobileMenuOpen && (
               <div className="md:hidden bg-gray-800 p-4">
                 <nav className="flex flex-col space-y-4">
-                  <a href="#home" className="text-white hover:text-red-500 transition-colors py-1">Home</a>
-                  <a href="#services" className="text-white hover:text-red-500 transition-colors py-1">Services</a>
-                  <a href="#parts" className="text-white hover:text-red-500 transition-colors py-1">Parts</a>
-                  <a href="#about" className="text-white hover:text-red-500 transition-colors py-1">About</a>
-                  <a href="#contact" className="text-white hover:text-red-500 transition-colors py-1">Contact</a>
+                  <a href="#home" className="text-white hover:text-red-500 transition-colors py-1">Inicio</a>
+                  <a href="#services" className="text-white hover:text-red-500 transition-colors py-1">Servicios</a>
+                  <a href="#parts" className="text-white hover:text-red-500 transition-colors py-1">Repuestos</a>
+                  <a href="#about" className="text-white hover:text-red-500 transition-colors py-1">Acerca de</a>
+                  <a href="#contact" className="text-white hover:text-red-500 transition-colors py-1">Contacto</a>
                 </nav>
               </div>
             )}
@@ -121,15 +121,15 @@
           <section id="home" className="relative bg-gray-900 text-white py-20">
             <div className="absolute inset-0 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
-              <img src="https://picsum.photos/seed/car/1920/1080 " alt="Car workshop" className="w-full h-full object-cover" />
+              <img src="https://picsum.photos/seed/car/1920/1080" alt="Taller automotriz" className="w-full h-full object-cover" />
             </div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-3xl">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Professional Auto Repair & Parts Store</h1>
-                <p className="text-xl mb-8 text-gray-300">Expert mechanics, quality parts, and exceptional service for all your automotive needs.</p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Taller Automotriz Profesional y Venta de Repuestos</h1>
+                <p className="text-xl mb-8 text-gray-300">Mecánicos expertos, repuestos de calidad y servicio excepcional para todas sus necesidades automotrices.</p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <a href="#contact" className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full transition-colors text-center">Schedule Service</a>
-                  <a href="#parts" className="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition-colors text-center">Browse Parts</a>
+                  <a href="#contact" className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full transition-colors text-center">Agendar Servicio</a>
+                  <a href="#parts" className="bg-white hover:bg-gray-100 text-gray-900 font-medium py-3 px-8 rounded-full transition-colors text-center">Ver Repuestos</a>
                 </div>
               </div>
             </div>
@@ -139,8 +139,8 @@
           <section id="services" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">From routine maintenance to complex repairs, our certified technicians provide comprehensive automotive services.</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">Desde mantenimiento rutinario hasta reparaciones complejas, nuestros técnicos certificados brindan servicios automotrices integrales.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service) => (
@@ -158,15 +158,15 @@
           <section id="parts" className="py-20 bg-white">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Premium Auto Parts</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">Find high-quality replacement parts for your vehicle at competitive prices.</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Repuestos de Calidad</h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">Encuentre repuestos de alta calidad para su vehículo a precios competitivos.</p>
               </div>
               <div className="mb-10 flex flex-wrap justify-center gap-4">
-                <button onClick={() => setActiveTab('all')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'all' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>All Parts</button>
-                <button onClick={() => setActiveTab('engine')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'engine' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Engine</button>
-                <button onClick={() => setActiveTab('brakes')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'brakes' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Brakes</button>
-                <button onClick={() => setActiveTab('electrical')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'electrical' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Electrical</button>
-                <button onClick={() => setActiveTab('suspension')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'suspension' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Suspension</button>
+                <button onClick={() => setActiveTab('all')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'all' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Todos</button>
+                <button onClick={() => setActiveTab('engine')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'engine' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Motor</button>
+                <button onClick={() => setActiveTab('brakes')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'brakes' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Frenos</button>
+                <button onClick={() => setActiveTab('electrical')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'electrical' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Eléctrico</button>
+                <button onClick={() => setActiveTab('suspension')} className={`py-2 px-4 rounded-full transition-colors ${activeTab === 'suspension' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-800 hover:bg-gray-300'}`}>Suspensión</button>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredParts.map((part) => (
@@ -178,14 +178,14 @@
                       <h3 className="text-xl font-semibold mb-2">{part.name}</h3>
                       <div className="flex justify-between items-center">
                         <span className="text-red-600 font-bold text-lg">{part.price}</span>
-                        <button className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Add to Cart</button>
+                        <button className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Añadir al Carrito</button>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="text-center mt-12">
-                <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-8 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">View More Parts</button>
+                <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-3 px-8 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400">Ver Más Repuestos</button>
               </div>
             </div>
           </section>
@@ -195,9 +195,9 @@
             <div className="container mx-auto px-4">
               <div className="flex flex-col lg:flex-row items-center">
                 <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">About Factoria Alianza</h2>
-                  <p className="text-gray-600 mb-6 leading-relaxed">Established in 2005, Factoria Alianza has been serving the community with top-notch automotive repair and maintenance services. Our team of ASE-certified technicians brings decades of combined experience and uses the latest diagnostic equipment to ensure your vehicle receives the best possible care.</p>
-                  <p className="text-gray-600 mb-6 leading-relaxed">We take pride in our commitment to excellence, offering transparent pricing, honest assessments, and exceptional customer service. Whether you need routine maintenance or complex repairs, we treat every vehicle as if it were our own.</p>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Acerca de Factoria Alianza</h2>
+                  <p className="text-gray-600 mb-6 leading-relaxed">Desde 2005, Factoria Alianza ofrece servicios de reparación y mantenimiento automotriz de primera calidad. Nuestro equipo de técnicos certificados cuenta con décadas de experiencia y utiliza los equipos de diagnóstico más avanzados para garantizar el mejor cuidado de su vehículo.</p>
+                  <p className="text-gray-600 mb-6 leading-relaxed">Nos enorgullece nuestro compromiso con la transparencia, precios justos y servicio al cliente excepcional. Ya sea mantenimiento rutinario o reparaciones complejas, tratamos cada vehículo como si fuera nuestro.</p>
                   <div className="flex flex-wrap gap-4">
                     <div className="bg-white p-4 rounded-lg shadow-md flex items-center">
                       <svg className="w-8 h-8 text-red-600 mr-3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,7 +205,7 @@
                       </svg>
                       <div>
                         <div className="font-bold text-lg">18+</div>
-                        <div className="text-sm text-gray-600">Years Experience</div>
+                        <div className="text-sm text-gray-600">Años de Experiencia</div>
                       </div>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-md flex items-center">
@@ -214,7 +214,7 @@
                       </svg>
                       <div>
                         <div className="font-bold text-lg">50K+</div>
-                        <div className="text-sm text-gray-600">Happy Customers</div>
+                        <div className="text-sm text-gray-600">Clientes Satisfechos</div>
                       </div>
                     </div>
                     <div className="bg-white p-4 rounded-lg shadow-md flex items-center">
@@ -223,14 +223,14 @@
                       </svg>
                       <div>
                         <div className="font-bold text-lg">100%</div>
-                        <div className="text-sm text-gray-600">Satisfaction Guarantee</div>
+                        <div className="text-sm text-gray-600">Garantía de Satisfacción</div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="lg:w-1/2">
                   <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                    <img src="https://picsum.photos/seed/workshop/800/600 " alt="Professional automotive workshop" className="w-full h-full object-cover" />
+                    <img src="https://picsum.photos/seed/workshop/800/600" alt="Taller profesional" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
@@ -241,8 +241,8 @@
           <section className="py-20 bg-white">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">Don't just take our word for it. Here's what our valued customers have to say about our service.</p>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">Lo que dicen nuestros clientes</h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">No solo confíe en nuestra palabra, esto es lo que opinan sobre nuestro servicio.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {testimonials.map((testimonial) => (
@@ -264,25 +264,45 @@
             <div className="container mx-auto px-4">
               <div className="flex flex-col lg:flex-row">
                 <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
-                  <p className="text-gray-600 mb-8">Have questions about our services or parts? Fill out the form below and we'll get back to you as soon as possible.</p>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Contáctanos</h2>
+                  <p className="text-gray-600 mb-8">¿Tiene preguntas sobre nuestros servicios o repuestos? Complete el formulario y nos pondremos en contacto lo antes posible.</p>
                   <form className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div><label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label><input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Your name" required /></div>
-                      <div><label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label><input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Your email" required /></div>
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                        <input type="text" id="name" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Su nombre" required />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+                        <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Su correo" required />
+                      </div>
                     </div>
-                    <div><label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label><input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Subject" required /></div>
-                    <div><label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label><textarea id="message" rows="5" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Your message" required></textarea></div>
-                    <button type="submit" className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full transition-colors w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Send Message</button>
+                    <div>
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                      <input type="text" id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Asunto" required />
+                    </div>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                      <textarea id="message" rows="5" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 outline-none" placeholder="Su mensaje" required></textarea>
+                    </div>
+                    <button type="submit" className="bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-8 rounded-full transition-colors w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">Enviar Mensaje</button>
                   </form>
                 </div>
                 <div className="lg:w-1/2">
                   <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-full">
-                    <img src="https://picsum.photos/seed/map/800/600 " alt="Location map" className="w-full h-full object-cover" />
+                    <img src="https://picsum.photos/seed/map/800/600" alt="Mapa de ubicación" className="w-full h-full object-cover" />
                   </div>
                   <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-white p-6 rounded-lg shadow-md"><h3 className="font-bold text-lg mb-3">Location</h3><p className="text-gray-600">123 Mechanic St, City</p></div>
-                    <div className="bg-white p-6 rounded-lg shadow-md"><h3 className="font-bold text-lg mb-3">Hours</h3><p className="text-gray-600">Mon-Fri: 8am - 6pm</p><p className="text-gray-600">Sat: 9am - 4pm</p><p className="text-gray-600">Sun: Closed</p></div>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="font-bold text-lg mb-3">Ubicación</h3>
+                      <p className="text-gray-600">123 Calle Mecánica, Chincha Alta</p>
+                    </div>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                      <h3 className="font-bold text-lg mb-3">Horario</h3>
+                      <p className="text-gray-600">Lun-Vie: 8:00-18:00</p>
+                      <p className="text-gray-600">Sáb: 9:00-16:00</p>
+                      <p className="text-gray-600">Dom: Cerrado</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -300,53 +320,47 @@
                     </svg>
                     <span className="text-xl font-bold">Factoria Alianza</span>
                   </div>
-                  <p className="text-gray-400 mb-4">Expert automotive repair and parts since 2005. We take pride in providing quality service to keep your vehicle running at its best.</p>
-                  <div className="flex space-x-4" aria-label="Social media links">
+                  <p className="text-gray-400 mb-4">Reparación automotriz y venta de repuestos desde 2005. Nos enorgullece ofrecer calidad y confianza.</p>
+                  <div className="flex space-x-4" aria-label="Enlaces a redes sociales">
                     <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                      </svg>
+                      <!-- ícono Twitter -->
                     </a>
                     <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
-                      </svg>
+                      <!-- ícono Facebook -->
                     </a>
                     <a href="#" className="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.227-1.664 4.771-4.92-4.919-1.266-.058-1.644-.07-4.85-.07-3.204 0-3.584.013-4.849.07-3.26.149-4.771 1.699-4.919 4.92-.058 1.265-.07 1.644-.07 4.849 0 3.259.014 3.667.072 4.947.2 4.358.196 6.78 2.618 6.98 6.98.059 1.281.073 1.689.073 4.948 0 3.259-.014 3.668-.072 4.947-.2 4.354-1.664 6.782-4.92 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.2-4.354-1.664-6.782-4.92-6.979-6.98-.059-1.265-.073-1.689-.073-4.948 0-3.259.014-3.668.072-4.947.2-4.354 1.664-6.782 4.92-6.979 6.98-.059 1.28-.073 1.689-.073 4.948 0 3.259-.014 3.667-.072 4.947-.2 4.354-1.664 6.782-4.92 6.979-6.98.059-1.265.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.2-4.354-1.664-6.782-4.92-6.979-6.98-1.281-.058-1.689-.072-4.948-.072-3.259 0-3.668.014-4.947.072-4.947.072z"/>
-                      </svg>
+                      <!-- ícono Instagram -->
                     </a>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                  <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
                   <ul className="space-y-2">
-                    <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Home</a></li>
-                    <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Services</a></li>
-                    <li><a href="#parts" className="text-gray-400 hover:text-white transition-colors">Parts</a></li>
-                    <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="#home" className="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+                    <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Servicios</a></li>
+                    <li><a href="#parts" className="text-gray-400 hover:text-white transition-colors">Repuestos</a></li>
+                    <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Acerca de</a></li>
+                    <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-4">Services</h3>
+                  <h3 className="text-lg font-semibold mb-4">Servicios</h3>
                   <ul className="space-y-2">
-                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Mechanical Repairs</a></li>
-                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Electrical Systems</a></li>
-                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Brake Services</a></li>
-                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Air Conditioning</a></li>
-                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Engine Diagnostics</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Reparaciones Mecánicas</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Sistemas Eléctricos</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Servicios de Frenos</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Aire Acondicionado</a></li>
+                    <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Diagnóstico de Motor</a></li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+                  <h3 className="text-lg font-semibold mb-4">Información de Contacto</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <svg className="w-5 h-5 text-red-500 mr-2 mt-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
                       </svg>
-                      <span>123 Mechanic St, City</span>
+                      <span>123 Calle Mecánica, Chincha Alta</span>
                     </li>
                     <li className="flex items-center">
                       <svg className="w-5 h-5 text-red-500 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,7 +378,7 @@
                 </div>
               </div>
               <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500 text-sm">
-                <p>&copy; {new Date().getFullYear()} Factoria Alianza. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Factoria Alianza. Todos los derechos reservados.</p>
               </div>
             </div>
           </footer>
