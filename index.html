@@ -19,62 +19,51 @@
   <script type="text/babel">
     const { useState } = React;
 
-    // 12 servicios (incluyendo los 3 nuevos)
+    // --- Servicios ---
     const services = [
-      { id:1,  title:"Reparaciones Mecánicas",           description:"Desde mantenimiento rutinario hasta reparaciones complejas.", icon:"🔧" },
-      { id:2,  title:"Sistemas Eléctricos",              description:"Diagnóstico y reparación de cualquier falla eléctrica.",       icon:"⚡" },
-      { id:3,  title:"Servicios de Frenos",              description:"Inspecciones, reparaciones y reemplazos de frenos con calidad.", icon:"🛑" },
-      { id:4,  title:"Rectificación de Discos",          description:"Restauración y pulido profesional de tus discos de freno.",      icon:"⚙️" },
-      { id:5,  title:"Diagnóstico de Motor",             description:"Equipo de diagnóstico de última generación para tu motor.",       icon:"🛠️" },
-      { id:6,  title:"Suspensión y Dirección",           description:"Inspección y ajuste para un manejo suave y seguro.",               icon:"🛞" },
-      { id:7,  title:"Cambio de Aceite",                 description:"Cambio profesional de aceite y filtro con las mejores marcas.",    icon:"🛢️" },
-      { id:8,  title:"Alineación y Balanceo",            description:"Alineación perfecta y balanceo equilibrado para tus ruedas.",      icon:"🔄" },
-      { id:9,  title:"Lavado de Inyectores",             description:"Limpieza profunda de inyectores para un rendimiento óptimo.",      icon:"💧" },
-      { id:10, title:"Rectificación de Piezas Cilíndricas", description:"Pulido y ajuste de cilindros con precisión profesional.",          icon:"⚙️" },
-      { id:11, title:"Prensado Hidráulico",              description:"Formado y prensado de piezas metálicas con alta presión.",        icon:"🔩" },
-      { id:12, title:"Soldadura",                        description:"Uniones de metal resistentes con soldadura profesional.",         icon:"🔥" },
+      { id:1,  title:"Reparaciones Mecánicas",           description:"Desde mantenimiento rutinario hasta reparaciones complejas.",               icon:"🔧" },
+      { id:2,  title:"Sistemas Eléctricos",              description:"Diagnóstico y reparación de cualquier falla eléctrica.",                     icon:"⚡" },
+      { id:3,  title:"Servicios de Frenos",              description:"Inspecciones, reparaciones y reemplazos de frenos con calidad.",               icon:"🛑" },
+      { id:4,  title:"Rectificación de Discos",          description:"Restauración y pulido profesional de tus discos de freno.",                    icon:"⚙️" },
+      { id:5,  title:"Diagnóstico de Motor",             description:"Equipo de diagnóstico de última generación para tu motor.",                     icon:"🛠️" },
+      { id:6,  title:"Suspensión y Dirección",           description:"Inspección y ajuste para un manejo suave y seguro.",                             icon:"🛞" },
+      { id:7,  title:"Cambio de Aceite",                 description:"Cambio profesional de aceite y filtro con las mejores marcas.",                  icon:"🛢️" },
+      { id:8,  title:"Alineación y Balanceo",            description:"Alineación perfecta y balanceo equilibrado para tus ruedas.",                    icon:"🔄" },
+      { id:9,  title:"Lavado de Inyectores",             description:"Limpieza profunda de inyectores para un rendimiento óptimo.",                    icon:"💧" },
+      { id:10, title:"Rectificación de Piezas Cilíndricas",description:"Pulido y ajuste de cilindros con precisión profesional.",                          icon:"⚙️" },
+      { id:11, title:"Prensado Hidráulico",              description:"Formado y prensado de piezas metálicas con alta presión.",                       icon:"🔩" },
+      { id:12, title:"Soldadura",                        description:"Uniones de metal resistentes con soldadura profesional.",                        icon:"🔥" },
+      { id:13, title:"Grúa Vehicular",                   description:"Servicio de remolque y auxilio vial las 24 h.",                                  icon:"🚚" },
     ];
 
-    // Partes: originales + nuevas imágenes (sin precio ni botón)
+    // --- Repuestos (sin precio ni botón) ---
     const parts = [
-   
-
-
-     
-    
-      { id:8,  name:"Filtro de aire en venta",          image:"images/Filtro de aire en venta.png",    category:"engine"     },
-      { id:9,  name:"Llantas en Venta con Rines",       image:"images/Llantas en Venta con Rines.png", category:"suspension" },
-      { id:10, name:"Manguera",                         image:"images/Manguera.png",                   category:"engine"     },
-      { id:11, name:"Bobina",                           image:"images/bobina.png",                     category:"engine"     },
-      { id:12, name:"Faja",                             image:"images/faja.png",                       category:"engine"     },
-      { id:13, name:"Soporte",                          image:"images/soporte.png",                    category:"engine"     },
+      { id:1,  name:"Pastillas de Freno",                  image:"images/pad.png",                        category:"brakes"     },
+      { id:2,  name:"Filtro de Aceite",                    image:"images/filter.png",                     category:"engine"     },
+      { id:3,  name:"Filtro de Aire",                      image:"images/airfilter.png",                  category:"engine"     },
+      { id:4,  name:"Bujías",                              image:"images/spark.png",                      category:"engine"     },
+      { id:5,  name:"Batería",                             image:"images/battery.png",                    category:"electrical" },
+      { id:6,  name:"Neumáticos",                          image:"images/tires.png",                      category:"suspension" },
+      { id:7,  name:"Cables de bujía en oferta",           image:"images/Cables de bujía en oferta.png",   category:"engine"     },
+      { id:8,  name:"Filtro de aire en venta",             image:"images/Filtro de aire en venta.png",    category:"engine"     },
+      { id:9,  name:"Llantas en Venta con Rines",          image:"images/Llantas en Venta con Rines.png", category:"suspension" },
+      { id:10, name:"Manguera",                            image:"images/Manguera.png",                   category:"engine"     },
+      { id:11, name:"Bobina",                              image:"images/bobina.png",                     category:"engine"     },
+      { id:12, name:"Faja",                                image:"images/faja.png",                       category:"engine"     },
+      { id:13, name:"Soporte",                             image:"images/soporte.png",                    category:"engine"     },
     ];
 
-    const testimonials = [
-      { id:1, name:"Carlos Mendoza",  rating:5, text:"¡Servicio excelente! Diagnóstico rápido y efectivo." },
-      { id:2, name:"Ana Rodríguez",   rating:5, text:"Profesionales y amables. Muy recomendable." },
-      { id:3, name:"Luis Torres",     rating:4, text:"Buen precio y calidad, aunque a veces hay algo de espera." },
-      { id:4, name:"Sofía Álvarez",   rating:5, text:"Reparación de emergencia en el día. Excelente atención." },
+    // --- Galería de Fotos ---
+    const gallery = [
+      { id:1, src:"images/ALINEAMIENTO.jpeg",       caption:"Alineamiento" },
+      { id:2, src:"images/MOTORES.jpeg",            caption:"Motores" },
+      { id:3, src:"images/electronico.jpeg",        caption:"Electrónico" },
+      { id:4, src:"images/torno.jpeg",              caption:"Torno" },
+      { id:5, src:"images/prensa.jpeg",             caption:"Prensa" },
+      { id:6, src:"images/soldadura.jpeg",          caption:"Soldadura" },
+      { id:7, src:"images/grua.jpeg",               caption:"Grúa Vehicular" },
+      { id:8, src:"images/lavado.jpeg",             caption:"Lavado de Inyectores" },
     ];
-
-    const renderStars = rating => (
-      <div className="flex">
-        {[...Array(5)].map((_, i) => (
-          <svg key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
-               fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1
-                     1 0 00.95.69h3.462c.969 0 1.371 1.24.588
-                     1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07
-                     3.292c.3.921-.755 1.688-1.54
-                     1.118l-2.8-2.034a1 1 0 00-1.175
-                     0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118
-                     l1.07-3.292a1 1 0 00-.364-1.118L2.98
-                     8.72c-.783-.57-.38-1.81.588-1.81h3.461a1
-                     1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-        ))}
-      </div>
-    );
 
     function App() {
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -92,20 +81,18 @@
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
               <div className="flex items-center">
                 <svg className="w-10 h-10 text-red-600" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10
-                           10 10-4.48 10-10S17.52 2 12 2z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                           10-4.48 10-10S17.52 2 12 2z"/>
                 </svg>
                 <span className="ml-2 text-xl font-bold">Factoria Alianza</span>
               </div>
-
               <nav className="hidden md:flex space-x-8">
-                <a href="#home"      className="hover:text-red-500">Inicio</a>
-                <a href="#services"  className="hover:text-red-500">Servicios</a>
-                <a href="#parts"     className="hover:text-red-500">Repuestos</a>
-                <a href="#about"     className="hover:text-red-500">Acerca de</a>
-                <a href="#contact"   className="hover:text-red-500">Contacto</a>
+                <a href="#home"     className="hover:text-red-500">Inicio</a>
+                <a href="#services" className="hover:text-red-500">Servicios</a>
+                <a href="#parts"    className="hover:text-red-500">Repuestos</a>
+                <a href="#gallery"  className="hover:text-red-500">Galería</a>
+                <a href="#contact"  className="hover:text-red-500">Contacto</a>
               </nav>
-
               <div className="hidden md:flex items-center space-x-4">
                 <div className="flex items-center">
                   <svg className="w-5 h-5 text-red-500 mr-1" viewBox="0 0 24 24" fill="none">
@@ -124,7 +111,6 @@
                   <span>Av. Oscar R. Benavides 1176, Chincha Alta</span>
                 </div>
               </div>
-
               <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden">
                 {mobileMenuOpen
                   ? <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,14 +124,13 @@
                 }
               </button>
             </div>
-
             {mobileMenuOpen && (
               <div className="md:hidden bg-gray-800 p-4 space-y-2">
-                <a href="#home"      className="block text-white">Inicio</a>
-                <a href="#services"  className="block text-white">Servicios</a>
-                <a href="#parts"     className="block text-white">Repuestos</a>
-                <a href="#about"     className="block text-white">Acerca de</a>
-                <a href="#contact"   className="block text-white">Contacto</a>
+                <a href="#home"     className="block text-white">Inicio</a>
+                <a href="#services" className="block text-white">Servicios</a>
+                <a href="#parts"    className="block text-white">Repuestos</a>
+                <a href="#gallery"  className="block text-white">Galería</a>
+                <a href="#contact"  className="block text-white">Contacto</a>
               </div>
             )}
           </header>
@@ -217,31 +202,20 @@
             </div>
           </section>
 
-          {/* ABOUT */}
-          <section id="about" className="py-20 bg-gray-50">
-            <div className="container mx-auto px-4 lg:flex lg:items-center lg:space-x-12">
-              <div className="lg:w-1/2">
-                <h2 className="text-4xl font-bold mb-4">Acerca de Factoria Alianza</h2>
-                <p className="text-gray-600 mb-4">Desde 2005, Factoria Alianza ofrece servicios de reparación y mantenimiento automotriz de primera calidad.</p>
-                <p className="text-gray-600">Nuestro equipo de técnicos certificados utiliza las últimas herramientas de diagnóstico para garantizar el mejor cuidado de tu vehículo.</p>
-              </div>
-              <div className="lg:w-1/2 mt-8 lg:mt-0">
-                <img src="https://picsum.photos/seed/workshop/800/600" alt="Taller Profesional" className="rounded shadow"/>
-              </div>
-            </div>
-          </section>
-
-          {/* TESTIMONIALS */}
-          <section className="py-20">
+          {/* GALLERY */}
+          <section id="gallery" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 text-center mb-12">
-              <h2 className="text-4xl font-bold">Lo que dicen nuestros clientes</h2>
+              <h2 className="text-4xl font-bold mb-4">Galería de Fotos</h2>
             </div>
-            <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-              {testimonials.map(t => (
-                <div key={t.id} className="bg-gray-50 p-6 rounded shadow">
-                  {renderStars(t.rating)}
-                  <p className="italic mt-3">"{t.text}"</p>
-                  <p className="font-semibold mt-4">{t.name}</p>
+            <div className="container mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+              {gallery.map(photo => (
+                <div key={photo.id} className="overflow-hidden rounded shadow-lg">
+                  <img
+                    src={photo.src}
+                    alt={photo.caption}
+                    className="w-full h-48 object-cover"
+                  />
+                  <p className="mt-2 text-center font-medium">{photo.caption}</p>
                 </div>
               ))}
             </div>
@@ -292,6 +266,7 @@
 </body>
 </html>
 ```
+
 
 
 
