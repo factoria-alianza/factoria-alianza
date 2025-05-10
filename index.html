@@ -1,76 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Factoría Alianza – Taller Automotriz</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header { background:#333; color:#fff; padding:20px; text-align:center; }
-    nav a { color:#fff; margin:0 10px; text-decoration:none; }
-    section { padding:20px; }
-    .servicios { display:flex; flex-wrap:wrap; gap:10px; }
-    .servicio { flex:1 1 calc(33% - 20px); border:1px solid #ccc; padding:10px; }
-    .galeria { display:flex; flex-wrap:wrap; gap:10px; }
-    .galeria img { width: calc(50% - 10px); }
-    footer { background:#f4f4f4; text-align:center; padding:10px; font-size:14px; }
-    @media(max-width:600px){
-      .servicio { flex:1 1 100%; }
-      .galeria img { width:100%; }
-    }
-  </style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome para iconos -->
+  <script src="https://kit.fontawesome.com/tu-kit-id.js" crossorigin="anonymous"></script>
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Factoría Alianza</h1>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#galeria">Galería</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Factoría Alianza</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quienes">Quiénes somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero text-white text-center d-flex align-items-center">
+    <div class="container">
+      <h1 class="display-4">Mantenimiento y Reparación Automotriz</h1>
+      <p class="lead">Servicio profesional en Chincha Alta – Perú</p>
+      <a href="#contacto" class="btn btn-primary btn-lg"><i class="fas fa-phone-alt"></i> Contáctanos</a>
+    </div>
   </header>
 
-  <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="servicios">
-      <div class="servicio">
-        <h3>Diagnóstico con Scanner</h3>
-        <p>Revisión completa de sensores y sistemas electrónicos.</p>
+  <!-- Servicios -->
+  <section id="servicios" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Nuestros Servicios</h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <i class="fas fa-tools fa-3x mb-3"></i>
+          <h5>Mecánica General</h5>
+          <p>Revisión, ajuste y reparación de motores a gasolina y diésel.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-laptop-code fa-3x mb-3"></i>
+          <h5>Diagnóstico con Scanner</h5>
+          <p>Lectura y análisis de códigos OBD-II, sensores y sistemas electrónicos.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-cogs fa-3x mb-3"></i>
+          <h5>Alineación y Balanceo</h5>
+          <p>Servicio de alineación de dirección y balanceo de ruedas.</p>
+        </div>
       </div>
-      <div class="servicio">
-        <h3>Mantenimiento de Motores</h3>
-        <p>Cambio de aceite, filtros y ajustes de precisión.</p>
-      </div>
-      <div class="servicio">
-        <h3>Reparación de Transmisiones</h3>
-        <p>Servicios en cajas manuales y automáticas.</p>
-      </div>
-      <!-- Agrega más servicios aquí -->
     </div>
   </section>
 
-  <section id="galeria">
-    <h2>Galería</h2>
-    <div class="galeria">
-      <img src="https://via.placeholder.com/400x300?text=Taller+1" alt="Taller foto 1">
-      <img src="https://via.placeholder.com/400x300?text=Taller+2" alt="Taller foto 2">
-      <img src="https://via.placeholder.com/400x300?text=Motor" alt="Motor">
-      <img src="https://via.placeholder.com/400x300?text=Equipo" alt="Equipo">
+  <!-- Quiénes somos -->
+  <section id="quienes" class="bg-light py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Quiénes Somos</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>Factoría Alianza es un taller automotriz familiar con más de 10 años de experiencia en Chincha Alta.  
+          Nuestro enfoque es la calidad, la honestidad y la satisfacción del cliente. Contamos con tecnología avanzada 
+          para diagnósticos electrónicos y un equipo de mecánicos capacitados.</p>
+          <ul>
+            <li>Horario: Lunes a Viernes 8:00 – 17:30</li>
+            <li>Garantía de 6 meses en reparaciones</li>
+            <li>Precios transparentes y competitivos</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <img src="https://via.placeholder.com/500x300" alt="Taller Automotriz" class="img-fluid rounded">
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Chincha Alta, Perú</p>
-    <p>📞 <a href="tel:+51123456789">+51 123 456 789</a></p>
-    <p>📧 <a href="mailto:contacto@factoriaalianza.com">contacto@factoriaalianza.com</a></p>
-    <p><a href="https://wa.me/51123456789" target="_blank">Envíanos un WhatsApp</a></p>
+  <!-- Testimonios -->
+  <section id="testimonios" class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Lo que dicen nuestros clientes</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>"Excelente servicio, detectaron el problema eléctrico en minutos y lo solucionaron al instante."</p>
+            <footer class="blockquote-footer">María Pérez</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>"Precios justos y atención muy profesional. Mi Hilux nunca ha funcionado tan bien."</p>
+            <footer class="blockquote-footer">José Ramírez</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    &copy; 2025 Factoría Alianza. Todos los derechos reservados.
+  <!-- Contacto -->
+  <section id="contacto" class="bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Contáctanos</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Chincha Alta, Ica</p>
+          <p><i class="fas fa-phone"></i> +51 987 654 321</p>
+          <p><i class="fab fa-whatsapp"></i> WhatsApp: +51 987 654 321</p>
+          <p><i class="fas fa-envelope"></i> contacto@factorialianza.pe</p>
+        </div>
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-secondary text-center text-white">
+    <small>© 2025 Factoría Alianza – Taller Automotriz. Todos los derechos reservados.</small>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
