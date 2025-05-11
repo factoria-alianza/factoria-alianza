@@ -21,30 +21,29 @@
 
     // --- Servicios ---
     const services = [
-      { id:1,  title:"Reparaciones Mecánicas",           description:"Desde mantenimiento rutinario hasta reparaciones complejas.",               icon:"🔧" },
-      { id:2,  title:"Sistemas Eléctricos",              description:"Diagnóstico y reparación de cualquier falla eléctrica.",                     icon:"⚡" },
-      { id:3,  title:"Servicios de Frenos",              description:"Inspecciones, reparaciones y reemplazos de frenos con calidad.",               icon:"🛑" },
-      { id:4,  title:"Rectificación de Discos",          description:"Restauración y pulido profesional de tus discos de freno.",                    icon:"⚙️" },
-      { id:5,  title:"Diagnóstico de Motor",             description:"Equipo de diagnóstico de última generación para tu motor.",                     icon:"🛠️" },
-      { id:6,  title:"Suspensión y Dirección",           description:"Inspección y ajuste para un manejo suave y seguro.",                             icon:"🛞" },
-      { id:7,  title:"Cambio de Aceite",                 description:"Cambio profesional de aceite y filtro con las mejores marcas.",                  icon:"🛢️" },
-      { id:8,  title:"Alineación y Balanceo",            description:"Alineación perfecta y balanceo equilibrado para tus ruedas.",                    icon:"🔄" },
-      { id:9,  title:"Lavado de Inyectores",             description:"Limpieza profunda de inyectores para un rendimiento óptimo.",                    icon:"💧" },
+      { id:1,  title:"Reparaciones Mecánicas",            description:"Desde mantenimiento rutinario hasta reparaciones complejas.",               icon:"🔧" },
+      { id:2,  title:"Sistemas Electrónicos",             description:"Diagnóstico y reparación de cualquier falla electrónica.",                  icon:"⚡" },
+      { id:3,  title:"Servicios de Frenos",               description:"Inspecciones, reparaciones y reemplazos de frenos con calidad.",               icon:"🛑" },
+      { id:4,  title:"Rectificación de Discos",           description:"Restauración y pulido profesional de tus discos de freno.",                    icon:"⚙️" },
+      { id:5,  title:"Diagnóstico de Motor",              description:"Equipo de diagnóstico de última generación para tu motor.",                     icon:"🛠️" },
+      { id:6,  title:"Suspensión y Dirección",            description:"Inspección y ajuste para un manejo suave y seguro.",                             icon:"🛞" },
+      { id:7,  title:"Cambio de Aceite",                  description:"Cambio profesional de aceite y filtro con las mejores marcas.",                  icon:"🛢️" },
+      { id:8,  title:"Alineación y Balanceo",             description:"Alineación perfecta y balanceo equilibrado para tus ruedas.",                    icon:"🔄" },
+      { id:9,  title:"Lavado de Inyectores",              description:"Limpieza profunda de inyectores para un rendimiento óptimo.",                    icon:"💧" },
       { id:10, title:"Rectificación de Piezas Cilíndricas",description:"Pulido y ajuste de cilindros con precisión profesional.",                          icon:"⚙️" },
-      { id:11, title:"Prensado Hidráulico",              description:"Formado y prensado de piezas metálicas con alta presión.",                       icon:"🔩" },
-      { id:12, title:"Soldadura",                        description:"Uniones de metal resistentes con soldadura profesional.",                        icon:"🔥" },
-      { id:13, title:"Grúa Vehicular",                   description:"Servicio de remolque y auxilio vial las 24 h.",                                  icon:"🚚" },
+      { id:11, title:"Prensado Hidráulico",               description:"Formado y prensado de piezas metálicas con alta presión.",                       icon:"🔩" },
+      { id:12, title:"Soldadura",                         description:"Uniones de metal resistentes con soldadura profesional.",                        icon:"🔥" },
+      { id:13, title:"Grúa Vehicular",                    description:"Servicio de remolque y auxilio vial las 24 h.",                                   icon:"🚚" },
     ];
 
-    // --- Repuestos (sin precio ni botón) ---
+    // --- Repuestos (solo imagen y nombre) ---
     const parts = [
-     
-      { id:8,  name:"Filtro de aire en venta",             image:"images/Filtro de aire en venta.png",    category:"engine"     },
-      { id:9,  name:"Llantas en Venta con Rines",          image:"images/Llantas en Venta con Rines.png", category:"suspension" },
-      { id:10, name:"Manguera",                            image:"images/Manguera.png",                   category:"engine"     },
-      { id:11, name:"Bobina",                              image:"images/bobina.png",                     category:"engine"     },
-      { id:12, name:"Faja",                                image:"images/faja.png",                       category:"engine"     },
-      { id:13, name:"Soporte",                             image:"images/soporte.png",                    category:"engine"     },
+      { id:1,  name:"Cables de bujía en oferta",           image:"images/Cables de bujía en oferta.png",   category:"engine"     },
+      { id:2,  name:"Llantas en Venta con Rines",          image:"images/Llantas en Venta con Rines.png", category:"suspension" },
+      { id:3,  name:"Manguera",                            image:"images/Manguera.png",                   category:"engine"     },
+      { id:4,  name:"Bobina",                              image:"images/bobina.png",                     category:"engine"     },
+      { id:5,  name:"Faja",                                image:"images/faja.png",                       category:"engine"     },
+      { id:6,  name:"Soporte",                             image:"images/soporte.png",                    category:"engine"     },
     ];
 
     // --- Galería de Fotos ---
@@ -56,7 +55,8 @@
       { id:5, src:"images/prensa.jpeg",             caption:"Prensa" },
       { id:6, src:"images/soldadura.jpeg",          caption:"Soldadura" },
       { id:7, src:"images/grua.jpeg",               caption:"Grúa Vehicular" },
-      { id:8, src:"images/lavado.jpeg",             caption:"Lavado de Inyectores" },
+      { id:8, src:"images/lavado vehicular.jpeg",   caption:"Lavado Vehicular" },
+      { id:9, src:"images/limpieza de inyectores.png", caption:"Limpieza de Inyectores" },
     ];
 
     function App() {
@@ -75,8 +75,8 @@
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
               <div className="flex items-center">
                 <svg className="w-10 h-10 text-red-600" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
-                           10-4.48 10-10S17.52 2 12 2z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10
+                           10 10-4.48 10-10S17.52 2 12 2z"/>
                 </svg>
                 <span className="ml-2 text-xl font-bold">Factoria Alianza</span>
               </div>
@@ -218,7 +218,7 @@
           {/* CONTACT */}
           <section id="contact" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4 lg:flex lg:space-x-12">
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2">  
                 <h2 className="text-4xl font-bold mb-4">Contáctanos</h2>
                 <form className="space-y-4">
                   <input className="w-full px-4 py-2 border rounded" placeholder="Nombre" />
@@ -260,7 +260,6 @@
 </body>
 </html>
 ```
-
 
 
 
