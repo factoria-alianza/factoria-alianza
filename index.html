@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,42 +21,42 @@
 
     // --- Servicios ---
     const services = [
-      { id:1,  title:"Reparaciones Mecánicas",            description:"Desde mantenimiento rutinario hasta reparaciones complejas.",               icon:"🔧" },
-      { id:2,  title:"Sistemas Electrónicos",             description:"Diagnóstico y reparación de cualquier falla electrónica.",                  icon:"⚡" },
-      { id:3,  title:"Servicios de Frenos",               description:"Inspecciones, reparaciones y reemplazos de frenos con calidad.",               icon:"🛑" },
-      { id:4,  title:"Rectificación de Discos",           description:"Restauración y pulido profesional de tus discos de freno.",                    icon:"⚙️" },
-      { id:5,  title:"Diagnóstico de Motor",              description:"Equipo de diagnóstico de última generación para tu motor.",                     icon:"🛠️" },
-      { id:6,  title:"Suspensión y Dirección",            description:"Inspección y ajuste para un manejo suave y seguro.",                             icon:"🛞" },
-      { id:7,  title:"Cambio de Aceite",                  description:"Cambio profesional de aceite y filtro con las mejores marcas.",                  icon:"🛢️" },
-      { id:8,  title:"Alineación y Balanceo",             description:"Alineación perfecta y balanceo equilibrado para tus ruedas.",                    icon:"🔄" },
-      { id:9,  title:"Lavado de Inyectores",              description:"Limpieza profunda de inyectores para un rendimiento óptimo.",                    icon:"💧" },
-      { id:10, title:"Rectificación de Piezas Cilíndricas",description:"Pulido y ajuste de cilindros con precisión profesional.",                          icon:"⚙️" },
-      { id:11, title:"Prensado Hidráulico",               description:"Formado y prensado de piezas metálicas con alta presión.",                       icon:"🔩" },
-      { id:12, title:"Soldadura",                         description:"Uniones de metal resistentes con soldadura profesional.",                        icon:"🔥" },
-      { id:13, title:"Grúa Vehicular",                    description:"Servicio de remolque y auxilio vial las 24 h.",                                   icon:"🚚" },
+      { id:1,  title:"Reparaciones Mecánicas",             description:"Desde mantenimiento rutinario hasta reparaciones complejas.",              icon:"🔧" },
+      { id:2,  title:"Sistemas Electrónicos",              description:"Diagnóstico y reparación de cualquier falla electrónica.",                 icon:"⚡" },
+      { id:3,  title:"Servicios de Frenos",                description:"Inspecciones, reparaciones y reemplazos de frenos con calidad.",              icon:"🛑" },
+      { id:4,  title:"Rectificación de Discos",            description:"Restauración y pulido profesional de tus discos de freno.",                   icon:"⚙️" },
+      { id:5,  title:"Diagnóstico de Motor",               description:"Equipo de diagnóstico de última generación para tu motor.",                    icon:"🛠️" },
+      { id:6,  title:"Suspensión y Dirección",             description:"Inspección y ajuste para un manejo suave y seguro.",                            icon:"🛞" },
+      { id:7,  title:"Cambio de Aceite",                   description:"Cambio profesional de aceite y filtro con las mejores marcas.",                 icon:"🛢️" },
+      { id:8,  title:"Alineación y Balanceo",              description:"Alineación perfecta y balanceo equilibrado para tus ruedas.",                   icon:"🔄" },
+      { id:9,  title:"Lavado de Inyectores",               description:"Limpieza profunda de inyectores para un rendimiento óptimo.",                   icon:"💧" },
+      { id:10, title:"Rectificación de Piezas Cilíndricas", description:"Pulido y ajuste de cilindros con precisión profesional.",                       icon:"⚙️" },
+      { id:11, title:"Prensado Hidráulico",                description:"Formado y prensado de piezas metálicas con alta presión.",                      icon:"🔩" },
+      { id:12, title:"Soldadura",                          description:"Uniones de metal resistentes con soldadura profesional.",                       icon:"🔥" },
+      { id:13, title:"Grúa Vehicular",                     description:"Servicio de remolque y auxilio vial las 24 h.",                                  icon:"🚚" },
     ];
 
-    // --- Repuestos (solo imagen y nombre oculto) ---
+    // --- Repuestos (solo imagen, sin texto) ---
     const parts = [
-      { id:1,  name:"Cables de bujía en oferta",           image:"images/Cables de bujía en oferta.png",   category:"engine"     },
-      { id:2,  name:"Llantas en Venta con Rines",          image:"images/Llantas en Venta con Rines.png", category:"suspension" },
-      { id:3,  name:"Manguera",                            image:"images/Manguera.png",                   category:"engine"     },
-      { id:4,  name:"Bobina",                              image:"images/bobina.png",                     category:"engine"     },
-      { id:5,  name:"Faja",                                image:"images/faja.png",                       category:"engine"     },
-      { id:6,  name:"Soporte",                             image:"images/soporte.png",                    category:"engine"     },
+      { id:1,  image:"images/Cables de bujía en oferta.png",   category:"engine"     },
+      { id:2,  image:"images/Llantas en Venta con Rines.png", category:"suspension" },
+      { id:3,  image:"images/Manguera.png",                   category:"engine"     },
+      { id:4,  image:"images/bobina.png",                     category:"engine"     },
+      { id:5,  image:"images/faja.png",                       category:"engine"     },
+      { id:6,  image:"images/soporte.png",                    category:"engine"     },
     ];
 
     // --- Galería de Fotos ---
     const gallery = [
-      { id:1, src:"images/ALINEAMIENTO.jpeg",       caption:"Alineamiento" },
-      { id:2, src:"images/MOTORES.jpeg",            caption:"Motores" },
-      { id:3, src:"images/electronico.jpeg",        caption:"Electrónico" },
-      { id:4, src:"images/torno.jpeg",              caption:"Torno" },
-      { id:5, src:"images/prensa.jpeg",             caption:"Prensa" },
-      { id:6, src:"images/soldadura.jpeg",          caption:"Soldadura" },
-      { id:7, src:"images/grua.jpeg",               caption:"Grúa Vehicular" },
-      { id:8, src:"images/lavado vehicular.jpeg",   caption:"Lavado Vehicular" },
-      { id:9, src:"images/limpieza de inyectores.png", caption:"Limpieza de Inyectores" },
+      { id:1, src:"images/ALINEAMIENTO.jpeg",            caption:"Alineamiento"          },
+      { id:2, src:"images/MOTORES.jpeg",                 caption:"Motores"               },
+      { id:3, src:"images/electronico.jpeg",             caption:"Electrónico"            },
+      { id:4, src:"images/torno.jpeg",                   caption:"Torno"                 },
+      { id:5, src:"images/prensa.jpeg",                  caption:"Prensa"                },
+      { id:6, src:"images/soldadura.jpeg",               caption:"Soldadura"             },
+      { id:7, src:"images/grua.jpeg",                    caption:"Grúa Vehicular"        },
+      { id:8, src:"images/lavado vehicular.jpeg",        caption:"Lavado Vehicular"      },
+      { id:9, src:"images/limpieza de inyectores.png",   caption:"Limpieza de Inyectores"},
     ];
 
     function App() {
@@ -168,7 +169,7 @@
             <div className="container mx-auto px-4 text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Repuestos de Calidad</h2>
               <div className="inline-flex space-x-2">
-                {['all','engine','brakes','electrical','suspension'].map(cat => (
+                {['all','engine','brakes','electronic','suspension'].map(cat => (
                   <button
                     key={cat}
                     onClick={() => setActiveTab(cat)}
@@ -181,7 +182,7 @@
                     {cat==='all'?'Todos'
                       :cat==='engine'?'Motor'
                       :cat==='brakes'?'Frenos'
-                      :cat==='electrical'?'Mecatrónica'
+                      :cat==='electronic'?'Mecatrónica'
                       :'Suspensión'}
                   </button>
                 ))}
@@ -192,10 +193,9 @@
                 <div key={p.id} className="bg-gray-50 rounded shadow hover:shadow-lg">
                   <img
                     src={p.image}
-                    alt={p.name}
+                    alt=""
                     className="w-full h-auto object-contain transition-transform hover:scale-105"
                   />
-                  {/* texto eliminado */}
                 </div>
               ))}
             </div>
@@ -225,12 +225,17 @@
             <div className="container mx-auto px-4 lg:flex lg:space-x-12">
               <div className="lg:w-1/2">
                 <h2 className="text-4xl font-bold mb-4">Contáctanos</h2>
-                <form className="space-y-4">
-                  <input className="w-full px-4 py-2 border rounded" placeholder="Nombre" />
-                  <input className="w-full px-4 py-2 border rounded" placeholder="Correo" type="email"/>
-                  <input className="w-full px-4 py-2 border rounded" placeholder="Asunto" />
-                  <textarea className="w-full px-4 py-2 border rounded" rows="5" placeholder="Mensaje"></textarea>
-                  <button className="bg-red-600 text-white px-6 py-3 rounded">Enviar Mensaje</button>
+                <form
+                  action="mailto:sgalianzaperu@gmail.com"
+                  method="POST"
+                  encType="text/plain"
+                  className="space-y-4"
+                >
+                  <input className="w-full px-4 py-2 border rounded" placeholder="Nombre" name="Nombre" />
+                  <input className="w-full px-4 py-2 border rounded" placeholder="Correo" name="Correo" type="email"/>
+                  <input className="w-full px-4 py-2 border rounded" placeholder="Asunto" name="Asunto" />
+                  <textarea className="w-full px-4 py-2 border rounded" rows="5" placeholder="Mensaje" name="Mensaje"></textarea>
+                  <button type="submit" className="bg-red-600 text-white px-6 py-3 rounded">Enviar Mensaje</button>
                 </form>
               </div>
               <div className="lg:w-1/2 mt-8 lg:mt-0">
@@ -265,6 +270,7 @@
 </body>
 </html>
 ```
+
 
 
 
